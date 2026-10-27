@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Routine - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item active"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Create Custom Workout Routine</h1>
+        <div class="subHeader">Build a routine and assign it to a member</div>
+        <form class="form-container wide" onsubmit="return saveRoutine(event)">
+            <div class="form-grid">
+                <div class="input-group"><label>Routine Name</label><input class="input-field" name="rname" required placeholder="e.g., Push Day"></div>
+                <div class="input-group"><label>Assign To</label><select class="input-field"><option value="">Select member</option><option>Dixie</option><option>Ehan</option><option>Mitu</option><option>Liyan</option><option>Javi</option></select></div>
+                <div class="input-group full"><label>Routine Description</label><textarea class="input-field" placeholder="Goal, level, weekly frequency"></textarea></div>
+            </div>
+            <h2 style="margin-top:6px">Exercises</h2>
+            <div id="exercises"></div>
+            <div class="btn-row">
+                <button type="button" class="btn-soft" onclick="addExercise()">+ Add Exercise</button>
+                <button type="submit" class="btn-submit">Save Routine</button>
+            </div>
+        </form>
+        <script>document.addEventListener("DOMContentLoaded", addExercise);</script>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>

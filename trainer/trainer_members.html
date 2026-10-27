@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigned Members - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item active"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Assigned Members</h1>
+        <div class="subHeader">Members currently training with you</div>
+        <input class="search-input" id="q" placeholder="Search members" oninput="filterRows('q','memTable')">
+        <div class="tableContainer"><table id="memTable">
+            <thead><tr><th>Name</th><th>Goal</th><th>Plan</th><th>Last Check-in</th><th>Status</th><th class="r">Actions</th></tr></thead>
+            <tbody>
+                <tr><td>Dixie</td><td class="detailText">Weight Loss</td><td class="detailText">Monthly</td><td class="detailText">Today</td><td><span class="status-badge status-present">Active</span></td><td class="r"><a class="link" href="trainer_progress.html">Progress</a> &middot; <a class="link" href="trainer_diet_plan.html">Diet</a></td></tr>
+                <tr><td>Ehan</td><td class="detailText">Muscle Gain</td><td class="detailText">Quarterly</td><td class="detailText">3 weeks ago</td><td><span class="status-badge status-ex">Inactive</span></td><td class="r"><a class="link" href="trainer_progress.html">Progress</a> &middot; <a class="link" href="trainer_diet_plan.html">Diet</a></td></tr>
+                <tr><td>Mitu</td><td class="detailText">General Fitness</td><td class="detailText">Yearly</td><td class="detailText">Yesterday</td><td><span class="status-badge status-present">Active</span></td><td class="r"><a class="link" href="trainer_progress.html">Progress</a> &middot; <a class="link" href="trainer_diet_plan.html">Diet</a></td></tr>
+                <tr><td>Liyan</td><td class="detailText">Strength</td><td class="detailText">Monthly</td><td class="detailText">Today</td><td><span class="status-badge status-present">Active</span></td><td class="r"><a class="link" href="trainer_progress.html">Progress</a> &middot; <a class="link" href="trainer_diet_plan.html">Diet</a></td></tr>
+                <tr><td>Javi</td><td class="detailText">Weight Loss</td><td class="detailText">Monthly</td><td class="detailText">1 month ago</td><td><span class="status-badge status-ex">Inactive</span></td><td class="r"><a class="link" href="trainer_progress.html">Progress</a> &middot; <a class="link" href="trainer_diet_plan.html">Diet</a></td></tr>
+            </tbody></table></div>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plans - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item active"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Diet Plans</h1>
+        <div class="subHeader">Create a custom weekly diet plan for a member</div>
+        <form class="form-container wide" onsubmit="return savePlan(event)">
+            <div class="form-grid">
+                <div class="input-group"><label>Member Name</label><select class="input-field" required><option value="">Select member</option><option>Dixie</option><option>Ehan</option><option>Mitu</option><option>Liyan</option><option>Javi</option></select></div>
+                <div class="input-group"><label>Daily Calorie Target (kcal)</label><input type="number" class="input-field" placeholder="e.g. 2200"></div>
+                <div class="input-group full"><label>Description / Goal</label><textarea class="input-field" placeholder="e.g. High-protein plan for fat loss"></textarea></div>
+                <div class="input-group full"><label>Select Day</label><select class="input-field" id="daySelect" onchange="loadDay()">
+                    <option value="monday">Monday</option><option value="tuesday">Tuesday</option><option value="wednesday">Wednesday</option><option value="thursday">Thursday</option><option value="friday">Friday</option><option value="saturday">Saturday</option><option value="sunday">Sunday</option></select></div>
+                <div class="input-group"><label>Breakfast</label><textarea class="input-field" id="breakfast" placeholder="Enter breakfast plan"></textarea></div>
+                <div class="input-group"><label>Lunch</label><textarea class="input-field" id="lunch" placeholder="Enter lunch plan"></textarea></div>
+                <div class="input-group"><label>Snack / Pre-workout</label><textarea class="input-field" id="snack" placeholder="Enter snack plan"></textarea></div>
+                <div class="input-group"><label>Dinner</label><textarea class="input-field" id="dinner" placeholder="Enter dinner plan"></textarea></div>
+            </div>
+            <button class="btn-submit" type="submit">Save Plan</button>
+        </form>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>

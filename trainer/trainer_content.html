@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item active"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Content Management</h1>
+        <div class="subHeader">Workout videos, articles and guides for your members</div>
+        <input class="search-input" id="q" placeholder="Search content" oninput="filterRows('q','contentTable')">
+        <div class="tableContainer"><table id="contentTable">
+            <thead><tr><th>Title</th><th>Type</th><th>Category</th><th>Visibility</th><th>Actions</th></tr></thead>
+            <tbody>
+                <tr><td>Beginner Full-Body Workout</td><td>Video</td><td><span class="pill">Strength</span></td><td>Public</td><td><a class="link" onclick="toast('Edit: Beginner Full-Body Workout')">Edit</a></td></tr>
+                <tr><td>High-Protein Meal Prep Guide</td><td>Article</td><td><span class="pill">Nutrition</span></td><td>Private</td><td><a class="link" onclick="toast('Edit: High-Protein Meal Prep Guide')">Edit</a></td></tr>
+                <tr><td>20-Minute HIIT Fat Burner</td><td>Video</td><td><span class="pill">Cardio</span></td><td>Public</td><td><a class="link" onclick="toast('Edit: 20-Minute HIIT Fat Burner')">Edit</a></td></tr>
+                <tr><td>Stretching &amp; Recovery Tips</td><td>Article</td><td><span class="pill">Mobility</span></td><td>Public</td><td><a class="link" onclick="toast('Edit: Stretching &amp; Recovery Tips')">Edit</a></td></tr>
+            </tbody></table></div>
+        <button class="action-btn btn-add" onclick="openModal()">+ Add Content</button>
+
+        <div id="contentModal" class="modal-overlay">
+            <form class="modal-content" onsubmit="return saveContent(event)">
+                <button type="button" class="close-btn" onclick="closeModal()">×</button>
+                <h3>Add Content</h3>
+                <div class="input-group"><label>Title</label><input class="input-field" name="title" required placeholder="Content title"></div>
+                <div class="form-grid">
+                    <div class="input-group"><label>Type</label><select class="input-field" name="ctype"><option>Video</option><option>Article</option></select></div>
+                    <div class="input-group"><label>Category</label><select class="input-field" name="category"><option>Strength</option><option>Cardio</option><option>Nutrition</option><option>Mobility</option></select></div>
+                </div>
+                <div class="input-group"><label>Visibility</label><select class="input-field" name="visibility"><option>Public</option><option>Private</option></select></div>
+                <div class="input-group"><label>Details</label><textarea class="input-field" placeholder="Enter details"></textarea></div>
+                <div class="upload-area" onclick="toast('Media upload will be handled by the PHP backend')">Upload Media</div>
+                <button class="btn-submit" type="submit" style="width:100%">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>

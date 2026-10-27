@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item active"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Chat</h1>
+        <div class="subHeader">Message your members</div>
+        <div class="chat-container">
+            <div class="contacts-pane">
+                <input class="search-input" id="cq" placeholder="Search" oninput="document.querySelectorAll('.contact-item').forEach(c=>c.style.display=c.textContent.toLowerCase().includes(this.value.toLowerCase())?'':'none')">
+                <div class="contact-item active" onclick="selectChat('Dixie',this)"><div class="c-avatar on">D</div><div><h5>Dixie</h5><span>Active 5m ago</span></div></div>
+                <div class="contact-item" onclick="selectChat('Mitu',this)"><div class="c-avatar on">M</div><div><h5>Mitu</h5><span>Active 2h ago</span></div></div>
+                <div class="contact-item" onclick="selectChat('Liyan',this)"><div class="c-avatar">L</div><div><h5>Liyan</h5><span>Active 3h ago</span></div></div>
+                <div class="contact-item" onclick="selectChat('Ehan',this)"><div class="c-avatar">E</div><div><h5>Ehan</h5><span>Active 4h ago</span></div></div>
+            </div>
+            <div class="conversation-pane">
+                <div class="chat-header" id="chatName">Dixie</div>
+                <div class="messages-area" id="msgs"></div>
+                <form class="chat-form" onsubmit="return sendMessage(event)">
+                    <input id="msgInput" placeholder="Type a message..." autocomplete="off">
+                    <button class="btn-submit" type="submit" style="padding:12px 26px">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>

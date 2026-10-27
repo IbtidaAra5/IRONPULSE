@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Dashboard - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item active"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Dashboard</h1>
+        <div class="subHeader"><span>Overview of your members and training activity</span></div>
+
+        <h2>Quick Actions</h2>
+        <div class="quick">
+            <button class="action-btn" onclick="location.href='trainer_add_member.html'">Manage Members</button>
+            <button class="action-btn ghost" onclick="location.href='trainer_profile.html'">Edit Profile</button>
+        </div>
+
+        <h2>Overview</h2>
+        <div class="kpiContainer">
+            <div class="kpiCard"><div class="kpiLabel">Today's Trainees</div><div class="kpiValue">15</div></div>
+            <div class="kpiCard"><div class="kpiLabel">Assigned Members</div><div class="kpiValue">38</div></div>
+            <div class="kpiCard"><div class="kpiLabel">Upcoming Sessions</div><div class="kpiValue">5</div></div>
+            <div class="kpiCard"><div class="kpiLabel">Plans to Review</div><div class="kpiValue">3</div><div class="kpiChange warn">Due this week</div></div>
+        </div>
+
+        <h2>Recent Activities</h2>
+        <div class="tableContainer"><table>
+            <thead><tr><th>Activity</th><th>Details</th><th>Timestamp</th></tr></thead>
+            <tbody>
+                <tr><td>New Member Assigned</td><td class="detailText">Elma was assigned to you</td><td class="detailText">2 hours ago</td></tr>
+                <tr><td>Progress Logged</td><td class="detailText">Dixie: weight 72.4 kg, waist 82 cm</td><td class="detailText">5 hours ago</td></tr>
+                <tr><td>Diet Plan Updated</td><td class="detailText">High-protein plan for Mitu</td><td class="detailText">1 day ago</td></tr>
+                <tr><td>Session Scheduled</td><td class="detailText">HIIT session with Liyan tomorrow</td><td class="detailText">1 day ago</td></tr>
+                <tr><td>New Message</td><td class="detailText">Javi asked about his routine</td><td class="detailText">2 days ago</td></tr>
+            </tbody></table></div>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>

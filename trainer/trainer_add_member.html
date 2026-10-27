@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Member - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item active"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Add New Member</h1>
+        <div class="subHeader">Register a new member under your training</div>
+        <form class="form-container" onsubmit="return submitForm(event,'Member added successfully!')">
+            <div class="form-grid">
+                <div class="input-group"><label>First Name</label><input class="input-field" required placeholder="Enter first name"></div>
+                <div class="input-group"><label>Last Name</label><input class="input-field" required placeholder="Enter last name"></div>
+                <div class="input-group"><label>Email</label><input type="email" class="input-field" required placeholder="Enter email"></div>
+                <div class="input-group"><label>Phone Number</label><input type="tel" class="input-field" required placeholder="01XXXXXXXXX" pattern="[0-9+\- ]{8,15}"></div>
+                <div class="input-group"><label>Gender</label><select class="input-field" required><option value="">Select gender</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+                <div class="input-group"><label>Date of Birth</label><input type="date" class="input-field" required></div>
+                <div class="input-group"><label>Height (cm)</label><input type="number" class="input-field" required placeholder="e.g. 170"></div>
+                <div class="input-group"><label>Weight (kg)</label><input type="number" step="0.1" class="input-field" required placeholder="e.g. 68"></div>
+                <div class="input-group full"><label>Fitness Goal</label><select class="input-field" required><option value="">Select goal</option><option>Weight Loss</option><option>Muscle Gain</option><option>Strength</option><option>General Fitness</option></select></div>
+                <div class="input-group full"><label>Health Information</label><textarea class="input-field" placeholder="Injuries, conditions or notes"></textarea></div>
+                <div class="input-group full"><label>Assigned Trainer</label><select class="input-field"><option>Rafi Ahmed</option><option>Nusrat Jahan</option><option>Tanvir Hasan</option></select></div>
+            </div>
+            <button class="btn-submit" type="submit">Add Member</button>
+        </form>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>

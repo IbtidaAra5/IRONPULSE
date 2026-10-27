@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Profile - IronPulse Trainer</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/trainer.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='trainer_profile.html'">
+            <div class="avatar">R</div>
+            <div><div class="user-name">Rafi Ahmed</div><div class="user-role">Trainer</div></div>
+        </div>
+        <div class="menu">
+            <a href="trainer_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="trainer_members.html" class="menu-item"><span class="icon">👥</span> Members</a>
+            <a href="trainer_add_member.html" class="menu-item"><span class="icon">➕</span> Add member</a>
+            <a href="trainer_content.html" class="menu-item"><span class="icon">▶️</span> Content</a>
+            <a href="trainer_diet_plan.html" class="menu-item"><span class="icon">🍎</span> Diet Plans</a>
+            <a href="trainer_progress.html" class="menu-item"><span class="icon">📈</span> Progress Logs</a>
+            <a href="trainer_routine.html" class="menu-item"><span class="icon">📅</span> Routine</a>
+            <a href="trainer_chat.html" class="menu-item"><span class="icon">💬</span> Chat</a>
+            <a href="trainer_profile.html" class="menu-item active"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Trainer Profile &amp; Settings</h1>
+        <div class="subHeader">Manage your profile information and settings</div>
+        <div class="profile-header-large"><div class="profile-pic-large">R</div><div><h3>Rafi Ahmed</h3><span>Trainer since 2023 &middot; ID: 789012</span></div></div>
+
+        <h2>Edit Profile Information</h2>
+        <form class="form-container" onsubmit="return submitForm(event,'Profile updated successfully!')">
+            <div class="input-group"><label>Full Name</label><input class="input-field" value="Rafi Ahmed" required></div>
+            <div class="input-group"><label>Contact Number</label><input class="input-field" value="+880 1700 000000" required></div>
+            <div class="input-group"><label>Specialization</label><input class="input-field" value="Strength &amp; Conditioning" required></div>
+            <div class="input-group"><label>Bio</label><textarea class="input-field">Certified strength coach with 8 years of experience in muscle gain and fat loss programs.</textarea></div>
+            <button class="action-btn" type="submit">Update Profile</button>
+        </form>
+
+        <h2>Change Password</h2>
+        <form class="form-container" onsubmit="return changePassword(event)">
+            <div class="input-group"><label>Current Password</label><input type="password" class="input-field" required placeholder="Enter current password"></div>
+            <div class="input-group"><label>New Password</label><input type="password" name="np" minlength="6" class="input-field" required placeholder="Enter new password"></div>
+            <div class="input-group"><label>Confirm New Password</label><input type="password" name="cp" class="input-field" required placeholder="Confirm new password"></div>
+            <button class="action-btn" type="submit">Change Password</button>
+        </form>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/trainer.js"></script>
+</body>
+</html>
