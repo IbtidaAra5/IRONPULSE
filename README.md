@@ -46,8 +46,6 @@
 
 **IronPulse Gym** replaces paper registers and scattered spreadsheets with one digital platform. Admins manage members, trainers and assignments; trainers build workout routines and diet plans and track progress; members follow their plans and memberships.
 
-> 🎓 Built as an academic web development project, adapted from a Yoga Center Management System and redesigned for gyms.
-
 | 🎯 Goal | 💡 How |
 |---|---|
 | Cut paperwork | Digital member, trainer and plan records |
