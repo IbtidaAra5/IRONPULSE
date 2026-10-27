@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Trainer - IronPulse</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='admin_profile.html'">
+            <div class="avatar">A</div>
+            <div><div class="user-name">Admin</div><div class="user-role">System Administrator</div></div>
+        </div>
+        <div class="menu">
+            <a href="admin_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="add_member.html" class="menu-item"><span class="icon">👥</span> Add member</a>
+            <a href="add_trainer.html" class="menu-item"><span class="icon">➕</span> Add trainer</a>
+            <a href="assign_trainer.html" class="menu-item active"><span class="icon">👤</span> Assign trainer</a>
+            <a href="admin_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Assign Trainers</h1>
+        <div class="subHeader">Assign a trainer to a member</div>
+        <form class="form-container" onsubmit="return submitForm(event,'Trainer assigned successfully!')">
+            <div class="form-grid">
+                <div class="input-group"><label>Trainer Name</label><select class="input-field" required><option value="">Select trainer</option><option>Rafi Ahmed</option><option>Nusrat Jahan</option><option>Tanvir Hasan</option></select></div>
+                <div class="input-group"><label>Member Name</label><select class="input-field" required><option value="">Select member</option><option>Olivia Davis</option><option>Noah Carter</option><option>Emma Wilson</option><option>Lucas Brown</option></select></div>
+                <div class="input-group"><label>Focus Area</label><select class="input-field" required><option value="">Select focus</option><option>Weight Loss</option><option>Muscle Gain</option><option>Strength</option><option>Rehab / Mobility</option></select></div>
+                <div class="input-group"><label>Start Date</label><input type="date" class="input-field" required></div>
+            </div>
+            <button class="btn-submit" type="submit">Assign</button>
+        </form>
+
+        <h2>Existing Trainers</h2>
+        <div class="tableContainer"><table>
+            <thead><tr><th>Name</th><th>Email</th><th>Specialization</th><th>Members</th><th class="c">Actions</th></tr></thead>
+            <tbody>
+                <tr><td>Rafi Ahmed</td><td class="detailText">rafi@ironpulse.com</td><td class="detailText">Strength &amp; Conditioning</td><td class="detailText">24</td><td class="c"><button class="btn-edit" onclick="handleEdit('Rafi Ahmed')">Edit</button></td></tr>
+                <tr><td>Nusrat Jahan</td><td class="detailText">nusrat@ironpulse.com</td><td class="detailText">HIIT &amp; Weight Loss</td><td class="detailText">18</td><td class="c"><button class="btn-edit" onclick="handleEdit('Nusrat Jahan')">Edit</button></td></tr>
+                <tr><td>Tanvir Hasan</td><td class="detailText">tanvir@ironpulse.com</td><td class="detailText">Bodybuilding &amp; Nutrition</td><td class="detailText">21</td><td class="c"><button class="btn-edit" onclick="handleEdit('Tanvir Hasan')">Edit</button></td></tr>
+            </tbody></table></div>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

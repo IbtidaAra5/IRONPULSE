@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - IronPulse</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='admin_profile.html'">
+            <div class="avatar">A</div>
+            <div><div class="user-name">Admin</div><div class="user-role">System Administrator</div></div>
+        </div>
+        <div class="menu">
+            <a href="admin_dashboard.html" class="menu-item active"><span class="icon">🏠</span> Dashboard</a>
+            <a href="add_member.html" class="menu-item"><span class="icon">👥</span> Add member</a>
+            <a href="add_trainer.html" class="menu-item"><span class="icon">➕</span> Add trainer</a>
+            <a href="assign_trainer.html" class="menu-item"><span class="icon">👤</span> Assign trainer</a>
+            <a href="admin_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Admin Dashboard</h1>
+        <div class="subHeader"><span>Central hub for managing all aspects of IronPulse Gym</span>
+            <button class="action-btn ghost" onclick="location.href='admin_profile.html'">Edit Profile</button></div>
+
+        <h2>Key Performance Indicators</h2>
+        <div class="kpiContainer">
+            <div class="kpiCard"><div class="kpiLabel">Total Members</div><div class="kpiValue">150</div><div class="kpiChange">+10%</div></div>
+            <div class="kpiCard"><div class="kpiLabel">Active Trainers</div><div class="kpiValue">12</div><div class="kpiChange">+5%</div></div>
+            <div class="kpiCard"><div class="kpiLabel">New Sign-Ups (Last Month)</div><div class="kpiValue">25</div><div class="kpiChange">+15%</div></div>
+            <div class="kpiCard"><div class="kpiLabel">Expiring in 7 Days</div><div class="kpiValue">8</div><div class="kpiChange warn">Needs follow-up</div></div>
+            <div class="kpiCard"><div class="kpiLabel">Monthly Revenue</div><div class="kpiValue">৳245k</div><div class="kpiChange">+8%</div></div>
+        </div>
+
+        <h2>Members Overview</h2>
+        <div class="tableContainer"><table>
+            <thead><tr><th>Member Name</th><th>Join Date</th><th>Plan</th><th>Expiry</th><th class="r">Status</th></tr></thead>
+            <tbody>
+                <tr><td>Olivia Davis</td><td class="detailText">Jan 15, 2026</td><td class="detailText">Monthly</td><td class="detailText">Nov 02, 2026</td><td class="r"><span class="status-badge status-warn">Expiring</span></td></tr>
+                <tr><td>Noah Carter</td><td class="detailText">Feb 10, 2026</td><td class="detailText">Yearly</td><td class="detailText">Feb 10, 2027</td><td class="r"><span class="status-badge status-present">Active</span></td></tr>
+                <tr><td>Emma Wilson</td><td class="detailText">Nov 05, 2025</td><td class="detailText">Quarterly</td><td class="detailText">Feb 05, 2026</td><td class="r"><span class="status-badge status-ex">Expired</span></td></tr>
+                <tr><td>Lucas Brown</td><td class="detailText">Sep 20, 2026</td><td class="detailText">Monthly</td><td class="detailText">Nov 20, 2026</td><td class="r"><span class="status-badge status-present">Active</span></td></tr>
+            </tbody></table></div>
+
+        <h2>Trainers Overview</h2>
+        <div class="tableContainer"><table>
+            <thead><tr><th>Trainer Name</th><th>Specialization</th><th>Experience</th><th>Members</th><th class="r">Status</th></tr></thead>
+            <tbody>
+                <tr><td>Rafi Ahmed</td><td class="detailText">Strength &amp; Conditioning</td><td class="detailText">8 Years</td><td class="detailText">24</td><td class="r"><span class="status-badge status-present">Active</span></td></tr>
+                <tr><td>Nusrat Jahan</td><td class="detailText">HIIT &amp; Weight Loss</td><td class="detailText">5 Years</td><td class="detailText">18</td><td class="r"><span class="status-badge status-present">Active</span></td></tr>
+                <tr><td>Tanvir Hasan</td><td class="detailText">Bodybuilding &amp; Nutrition</td><td class="detailText">6 Years</td><td class="detailText">21</td><td class="r"><span class="status-badge status-present">Active</span></td></tr>
+                <tr><td>Sarah Lee</td><td class="detailText">Cardio</td><td class="detailText">3 Years</td><td class="detailText">0</td><td class="r"><span class="status-badge status-ex">Ex-Trainer</span></td></tr>
+            </tbody></table></div>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Member - IronPulse</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='admin_profile.html'">
+            <div class="avatar">A</div>
+            <div><div class="user-name">Admin</div><div class="user-role">System Administrator</div></div>
+        </div>
+        <div class="menu">
+            <a href="admin_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="add_member.html" class="menu-item active"><span class="icon">👥</span> Add member</a>
+            <a href="add_trainer.html" class="menu-item"><span class="icon">➕</span> Add trainer</a>
+            <a href="assign_trainer.html" class="menu-item"><span class="icon">👤</span> Assign trainer</a>
+            <a href="admin_profile.html" class="menu-item"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Member Management</h1>
+        <div class="subHeader">Add New Member</div>
+        <form class="form-container" onsubmit="return submitForm(event,'Member added successfully!')">
+            <div class="form-grid">
+                <div class="input-group full"><label>Full Name</label><input class="input-field" required placeholder="Enter member's full name"></div>
+                <div class="input-group"><label>Age</label><input type="number" min="12" max="90" class="input-field" required placeholder="Age"></div>
+                <div class="input-group"><label>Gender</label><select class="input-field" required><option value="">Select gender</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+                <div class="input-group"><label>Contact Number</label><input type="tel" class="input-field" required placeholder="01XXXXXXXXX" pattern="[0-9+\- ]{8,15}"></div>
+                <div class="input-group"><label>Email Address</label><input type="email" class="input-field" required placeholder="member@email.com"></div>
+                <div class="input-group"><label>Password</label><input type="password" minlength="6" class="input-field" required placeholder="Minimum 6 characters"></div>
+                <div class="input-group"><label>Current Weight (kg)</label><input type="number" step="0.1" class="input-field" required placeholder="e.g. 70"></div>
+                <div class="input-group"><label>Height (cm)</label><input type="number" class="input-field" required placeholder="e.g. 172"></div>
+                <div class="input-group"><label>Fitness Level</label><select class="input-field" required><option value="">Select level</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+                <div class="input-group"><label>Fitness Goal</label><select class="input-field" required><option value="">Select goal</option><option>Weight Loss</option><option>Muscle Gain</option><option>Strength</option><option>General Fitness</option></select></div>
+                <div class="input-group"><label>Membership Plan</label><select class="input-field" required><option value="">Select plan</option><option>Monthly - ৳2,000</option><option>Quarterly - ৳5,400</option><option>Yearly - ৳18,000</option></select></div>
+                <div class="input-group full"><label>Assign Trainer</label><select class="input-field"><option value="">Select trainer</option><option>Rafi Ahmed</option><option>Nusrat Jahan</option><option>Tanvir Hasan</option></select></div>
+                <div class="input-group full"><label>Existing Conditions / Notes</label><textarea class="input-field" placeholder="Any medical conditions, injuries or notes"></textarea></div>
+            </div>
+            <button class="btn-submit" type="submit">Add Member</button>
+        </form>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

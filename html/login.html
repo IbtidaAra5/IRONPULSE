@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IronPulse</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="mainContent">
+        <div class="navbar">
+            <div class="logo"><h3><a href="index.html">Iron<span>Pulse</span></a></h3></div>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="membership.html">Membership Plans</a></li>
+                <li><a href="index.html#classes">Classes</a></li>
+                <li><a href="index.html#trainers">Trainers</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+        </div>
+
+        <div class="secBox">
+            <div class="login-wrap">
+                <div class="login-box">
+                    <span style="font-size:28px">🏋️</span>
+                    <div class="welcome-text">Welcome Back</div>
+
+                    <div class="toggle-container">
+                        <button class="toggle-btn active" id="btn-member" onclick="setRole('member')">Member</button>
+                        <button class="toggle-btn" id="btn-trainer" onclick="setRole('trainer')">Trainer</button>
+                        <button class="toggle-btn" id="btn-admin" onclick="setRole('admin')">Admin</button>
+                    </div>
+
+                    <div class="input-group"><input type="text" id="email" placeholder="Email or username"></div>
+                    <div class="input-group"><input type="password" id="password" placeholder="Password"></div>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+
+                    <button class="btn-login-main" onclick="handleLogin()">Login</button>
+                    <p id="error-msg">Invalid credentials</p>
+                    <p class="demo">Demo only: member / member &middot; trainer / trainer &middot; admin / admin<br>Replace with PHP + MySQL login (password_verify) later.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="index.html#contact">Contact Us</a>
+            </div>
+            <p>&copy; 2026 IronPulse Gym. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        let currentRole = "member";
+        const pages = {member: "member_dashboard.html", trainer: "trainer_dashboard.html", admin: "admin_dashboard.html"};
+
+        function setRole(role) {
+            currentRole = role;
+            ["member", "trainer", "admin"].forEach(r =>
+                document.getElementById("btn-" + r).classList.toggle("active", r === role));
+        }
+
+        function handleLogin() {
+            const user = document.getElementById("email").value.trim().toLowerCase();
+            const pass = document.getElementById("password").value;
+            const ok = (user === currentRole || user === currentRole + "@test.com") && pass === currentRole;
+            if (ok) { window.location.href = pages[currentRole]; }
+            else { document.getElementById("error-msg").style.display = "block"; }
+        }
+
+        document.addEventListener("keydown", e => { if (e.key === "Enter") handleLogin(); });
+    </script>
+</body>
+</html>

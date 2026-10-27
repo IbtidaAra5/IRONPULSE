@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile - IronPulse</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">Iron<span>Pulse</span></div>
+        <div class="user-profile" onclick="location.href='admin_profile.html'">
+            <div class="avatar">A</div>
+            <div><div class="user-name">Admin</div><div class="user-role">System Administrator</div></div>
+        </div>
+        <div class="menu">
+            <a href="admin_dashboard.html" class="menu-item"><span class="icon">🏠</span> Dashboard</a>
+            <a href="add_member.html" class="menu-item"><span class="icon">👥</span> Add member</a>
+            <a href="add_trainer.html" class="menu-item"><span class="icon">➕</span> Add trainer</a>
+            <a href="assign_trainer.html" class="menu-item"><span class="icon">👤</span> Assign trainer</a>
+            <a href="admin_profile.html" class="menu-item active"><span class="icon">⚙️</span> Profile</a>
+            <a href="login.html" class="menu-item logout"><span class="icon">🚪</span> Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Admin Profile</h1>
+        <div class="subHeader">Manage your account details and security settings</div>
+        <div class="profile-header-large"><div class="profile-pic-large">A</div><div><h3>Admin</h3><span>System Administrator</span></div></div>
+
+        <h2>Personal Details</h2>
+        <form class="form-container" onsubmit="return submitForm(event,'Profile updated successfully!')">
+            <div class="input-group"><label>Full Name</label><input class="input-field" value="Admin" required></div>
+            <div class="input-group"><label>Email Address</label><input type="email" class="input-field" value="admin@ironpulse.com" required></div>
+            <div class="input-group"><label>Contact Number</label><input class="input-field" value="+880 1234 567890" required></div>
+            <button class="action-btn" type="submit">Update Profile</button>
+        </form>
+
+        <h2>Security</h2>
+        <form class="form-container" onsubmit="return changePassword(event)">
+            <div class="input-group"><label>Current Password</label><input type="password" class="input-field" required placeholder="••••••••"></div>
+            <div class="input-group"><label>New Password</label><input type="password" name="np" minlength="6" class="input-field" required placeholder="Enter new password"></div>
+            <div class="input-group"><label>Confirm New Password</label><input type="password" name="cp" class="input-field" required placeholder="Confirm new password"></div>
+            <button class="action-btn" type="submit">Change Password</button>
+        </form>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
