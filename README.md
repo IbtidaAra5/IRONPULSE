@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/logo.svg" alt="IronPulse Gym" width="320">
+
 
 # 🏋️ Gym Management System
 
@@ -188,7 +188,6 @@ Run it instantly, no setup needed:
 </details>
 
 ### 🔀 User Flow
-
 ```mermaid
 flowchart LR
     A([🌐 Visitor]) --> B[Home / Plans]
@@ -203,22 +202,16 @@ flowchart LR
     E --> E3[Chat]
     F --> F1[View Plans & BMI]
 ```
-
 ---
-
 ## 📸 Screenshots
-
-> Add your screenshots to a `screenshots/` folder, then replace the placeholders below.
 
 | Home | Membership Plans |
 |:---:|:---:|
-| ![Home](screenshots/home.png) | ![Plans](screenshots/membership.png) |
+| <img src="https://github.com/user-attachments/assets/e95cdd72-ebae-497d-a79c-576358f25788" alt="Home" width="100%"> | <img src="https://github.com/user-attachments/assets/6cd40113-adbb-4420-8eeb-b4296ed343ff" alt="Membership Plans" width="100%"> |
 
 | Admin Dashboard | Trainer Dashboard |
 |:---:|:---:|
-| ![Admin](screenshots/admin-dashboard.png) | ![Trainer](screenshots/trainer-dashboard.png) |
-
----
+| <img src="https://github.com/user-attachments/assets/024457d5-28d2-4754-b478-427820e353b9" alt="Admin Dashboard" width="100%"> | <img src="https://github.com/user-attachments/assets/ecc3627d-6e68-4aad-b8f5-36055cd43da2" alt="Trainer Dashboard" width="100%"> |
 
 ## 🛠️ Tech Stack
 
